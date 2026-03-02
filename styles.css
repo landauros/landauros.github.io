@@ -8,10 +8,15 @@
   --primary-strong: #115e59;
   --ring: #0d9488;
   --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  --nav-offset: 4.25rem;
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -25,6 +30,37 @@ body {
   color: var(--text);
   background: var(--bg);
   line-height: 1.65;
+}
+
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  border-bottom: 1px solid var(--border);
+  background: rgba(247, 250, 252, 0.94);
+  backdrop-filter: blur(6px);
+}
+
+.top-nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.72rem 0;
+}
+
+.top-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.94rem;
+  color: var(--muted);
+  border-radius: 0.5rem;
+  padding: 0.42rem 0.62rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.top-nav a:hover {
+  color: var(--primary-strong);
+  background: #e6fffa;
 }
 
 a {
@@ -59,8 +95,32 @@ a:hover {
 
 .hero {
   background: linear-gradient(180deg, #ffffff 0%, #eef6f6 100%);
-  padding: 4.25rem 0 3rem;
+  padding: 3.7rem 0 3rem;
   border-bottom: 1px solid var(--border);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-media {
+  justify-self: end;
+}
+
+.hero-media img {
+  width: min(100%, 320px);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .eyebrow {
@@ -101,6 +161,8 @@ h1 {
   border: 1px solid transparent;
   font-weight: 600;
   text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease;
 }
 
 .btn-primary {
@@ -111,6 +173,8 @@ h1 {
 .btn-primary:hover {
   background: var(--primary-strong);
   color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(13, 148, 136, 0.22);
 }
 
 .btn-secondary {
@@ -122,10 +186,12 @@ h1 {
 .btn-secondary:hover {
   border-color: #cbd5e1;
   color: var(--text);
+  transform: translateY(-1px);
 }
 
 .section {
   padding: 2.6rem 0;
+  scroll-margin-top: calc(var(--nav-offset) + 0.8rem);
 }
 
 h2 {
@@ -164,6 +230,12 @@ h3 {
   border-radius: 0.8rem;
   box-shadow: var(--shadow);
   padding: 1rem 1.15rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
 }
 
 .timeline-item {
@@ -196,8 +268,45 @@ ul {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --nav-offset: 6.8rem;
+  }
+
+  .top-nav-inner {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    gap: 0.15rem;
+    padding: 0.62rem 0;
+  }
+
+  .top-nav a {
+    white-space: nowrap;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.56rem;
+  }
+
   .hero {
-    padding: 3.4rem 0 2.4rem;
+    padding: 3rem 0 2.2rem;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+    text-align: left;
+  }
+
+  .hero-media {
+    justify-self: center;
+  }
+
+  .hero-media img {
+    width: min(100%, 270px);
+  }
+
+  .hero-actions {
+    gap: 0.6rem;
   }
 
   .section {
