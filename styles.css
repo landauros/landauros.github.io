@@ -84,14 +84,14 @@ a:hover {
 
 .hero-layout {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 40px;
+  grid-template-columns: 160px 1fr;
+  gap: 30px;
   align-items: start;
 }
 
 .hero-image img {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 213px;
   object-fit: cover;
   border: 1px solid var(--border);
 }
