@@ -56,10 +56,48 @@ a:hover {
   left: 0.75rem;
 }
 
+.nav {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.nav .container {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--link);
+}
+
 .hero {
   background: var(--bg);
   padding: 60px 0 40px;
   border-bottom: 1px solid var(--border);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.hero-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.hero-content {
+  min-width: 0;
 }
 
 .eyebrow {
@@ -203,6 +241,21 @@ ul li {
 @media (max-width: 768px) {
   .hero {
     padding: 40px 0 30px;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .nav .container {
+    gap: 16px;
+    overflow-x: auto;
   }
 
   .section {
