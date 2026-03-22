@@ -21,12 +21,14 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --source blog-source --destination ../blog
+        run: |
+          cd blog-source
+          hugo --minify -d ../blog
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./blog
-          destination_dir: blog
-          keep_files: true
+      - name: Commit and Push
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add blog/
+          git diff --staged --quiet || git commit -m "Deploy blog [skip ci]"
+          git push
