@@ -1,4 +1,4 @@
-baseURL: "https://landauros.github.io/llm-note/"
+baseURL: "https://landauros.github.io/blog/"
 languageCode: "zh-cn"
 defaultContentLanguage: "zh"
 title: "LLM Notes | 大模型学习笔记"
