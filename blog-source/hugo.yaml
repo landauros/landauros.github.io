@@ -1,0 +1,121 @@
+baseURL: "https://landauros.github.io/llm-note/"
+languageCode: "zh-cn"
+defaultContentLanguage: "zh"
+title: "LLM Notes | 大模型学习笔记"
+theme: "PaperMod"
+
+# Build
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+# Minify output
+minify:
+  disableXML: true
+  minifyOutput: true
+
+# Taxonomy
+taxonomies:
+  tag: tags
+  category: categories
+  series: series    # This enables multi-part series grouping
+
+params:
+  env: production
+  title: "LLM Notes"
+  description: "大模型课程学习笔记 | 从Transformer到RLHF的原创技术分析"
+  keywords: [LLM, Transformer, RLHF, Deep Learning, SSM, Mamba]
+  author: "Landau"
+  
+  defaultTheme: auto  # auto switches between light/dark
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowToc: true       # Table of contents on each post
+  TocOpen: false      # Collapsed by default
+
+  # KaTeX math rendering
+  math: true
+
+  # Home page
+  homeInfoParams:
+    Title: "LLM Notes | 大模型学习笔记"
+    Content: >
+      北航大模型课程的学习笔记与原创分析。覆盖 Transformer 架构、预训练、RLHF/Alignment、
+      推理部署优化等核心主题。每篇文章力求从直觉到数学，把论文读透。
+
+  # Social icons on home page
+  socialIcons:
+    - name: github
+      url: "https://github.com/landauros"
+
+  # Profile mode (alternative to homeInfo — uncomment to use)
+  # profileMode:
+  #   enabled: true
+  #   title: "Landau"
+  #   subtitle: "CS @ BUAA | AI4Math & LLM Research"
+  #   imageUrl: "/avatar.jpg"
+  #   imageWidth: 120
+  #   imageHeight: 120
+  #   buttons:
+  #     - name: Posts
+  #       url: posts
+  #     - name: Tags
+  #       url: tags
+
+  # Search
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+# Menu
+menu:
+  main:
+    - identifier: posts
+      name: "文章"
+      url: /posts/
+      weight: 10
+    - identifier: series
+      name: "系列"
+      url: /series/
+      weight: 20
+    - identifier: tags
+      name: "标签"
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: "搜索"
+      url: /search/
+      weight: 40
+    - identifier: about
+      name: "关于"
+      url: /about/
+      weight: 50
+
+# Output formats for search
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Markup config
+markup:
+  goldmark:
+    renderer:
+      unsafe: true   # Allows HTML in markdown (for custom elements)
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: monokai

@@ -1,0 +1,32 @@
+{
+  "editor.wordWrap": "on",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 1.8,
+  "editor.minimap.enabled": false,
+
+  "markdown.preview.fontSize": 15,
+  "markdown.preview.lineHeight": 1.8,
+
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    },
+    "editor.tabSize": 2,
+    "editor.rulers": [100]
+  },
+
+  "files.associations": {
+    "*.md": "markdown"
+  },
+
+  "pasteImage.path": "${currentFileDir}/images",
+  "pasteImage.namePrefix": "fig-",
+  "pasteImage.defaultName": "YMMDD-HHmmss",
+
+  "frontMatter.extends": [
+    "./frontmatter.json"
+  ]
+}

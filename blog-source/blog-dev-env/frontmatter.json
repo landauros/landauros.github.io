@@ -1,0 +1,219 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "post",
+      "pageBundle": true,
+      "previewPath": "/llm-note",
+      "filePrefix": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "Date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Last Modified",
+          "name": "lastmod",
+          "type": "datetime",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Math",
+          "name": "math",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "title": "Summary",
+          "name": "summary",
+          "type": "string",
+          "description": "一两句话摘要，显示在文章列表"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string",
+          "description": "SEO 描述"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Series",
+          "name": "series",
+          "type": "tags",
+          "taxonomyId": "series"
+        },
+        {
+          "title": "Author",
+          "name": "author",
+          "type": "string",
+          "default": "Landau"
+        },
+        {
+          "title": "Show TOC",
+          "name": "ShowToc",
+          "type": "boolean",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.tags": [
+    "attention",
+    "transformer",
+    "SSM",
+    "mamba",
+    "flash-attention",
+    "位置编码",
+    "RoPE",
+    "normalization",
+    "预训练",
+    "tokenizer",
+    "scaling-laws",
+    "分布式训练",
+    "SFT",
+    "RLHF",
+    "PPO",
+    "DPO",
+    "GRPO",
+    "reward-model",
+    "KV-cache",
+    "量化",
+    "推理加速",
+    "AI4Math",
+    "数学推导",
+    "代码实现",
+    "实战经验",
+    "论文导读"
+  ],
+  "frontMatter.taxonomy.categories": [
+    "架构",
+    "训练",
+    "对齐",
+    "推理部署",
+    "论文导读",
+    "方法论"
+  ],
+  "frontMatter.taxonomy.customTaxonomy": [
+    {
+      "id": "series",
+      "options": [
+        "BUAA-LLM-Course",
+        "Paper-Reading",
+        "Hands-On"
+      ]
+    }
+  ],
+  "frontMatter.content.autoUpdateDate": true,
+  "frontMatter.content.fmHighlight": true,
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "Posts",
+      "path": "[[workspace]]/content/posts",
+      "contentTypes": ["post"],
+      "previewPath": "/llm-note/posts"
+    }
+  ],
+  "frontMatter.preview.host": "http://localhost:1313",
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.content.snippets": {
+    "Math Block": {
+      "description": "Insert a display math block",
+      "body": "\n$$\n[[content]]\n$$\n",
+      "fields": [
+        {
+          "name": "content",
+          "title": "LaTeX",
+          "type": "string",
+          "default": "\\mathcal{L} = "
+        }
+      ]
+    },
+    "Figure": {
+      "description": "Insert a figure with caption",
+      "body": "{{< figure src=\"images/[[filename]]\" caption=\"[[caption]]\" >}}",
+      "fields": [
+        {
+          "name": "filename",
+          "title": "Image filename",
+          "type": "string"
+        },
+        {
+          "name": "caption",
+          "title": "Caption",
+          "type": "string"
+        }
+      ]
+    },
+    "Callout": {
+      "description": "Insert a callout/admonition block",
+      "body": "> **[[type]]**: [[content]]",
+      "fields": [
+        {
+          "name": "type",
+          "title": "Type",
+          "type": "choice",
+          "choices": ["Note", "Tip", "Warning", "My Take"]
+        },
+        {
+          "name": "content",
+          "title": "Content",
+          "type": "string"
+        }
+      ]
+    },
+    "Paper Reference": {
+      "description": "Insert a paper reference",
+      "body": "[[authors]] \"[[title]].\" *[[venue]]* [[year]].",
+      "fields": [
+        {
+          "name": "authors",
+          "title": "Authors",
+          "type": "string",
+          "default": "Author et al."
+        },
+        {
+          "name": "title",
+          "title": "Paper Title",
+          "type": "string"
+        },
+        {
+          "name": "venue",
+          "title": "Venue",
+          "type": "string",
+          "default": "NeurIPS"
+        },
+        {
+          "name": "year",
+          "title": "Year",
+          "type": "string",
+          "default": "2024"
+        }
+      ]
+    }
+  },
+  "frontMatter.dashboard.openOnStart": false
+}
