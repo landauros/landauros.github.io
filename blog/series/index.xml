@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>大模型课程系列 on LLM Notes | 大模型学习笔记</title>
-    <link>https://landauros.github.io/llm-note/series/</link>
+    <link>https://landauros.github.io/blog/series/</link>
     <description>Recent content in 大模型课程系列 on LLM Notes | 大模型学习笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://landauros.github.io/llm-note/series/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://landauros.github.io/blog/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BUAA-LLM-Course</title>
-      <link>https://landauros.github.io/llm-note/series/buaa-llm-course/</link>
+      <link>https://landauros.github.io/blog/series/buaa-llm-course/</link>
       <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://landauros.github.io/llm-note/series/buaa-llm-course/</guid>
+      <guid>https://landauros.github.io/blog/series/buaa-llm-course/</guid>
       <description></description>
     </item>
   </channel>

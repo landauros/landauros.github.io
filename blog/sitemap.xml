@@ -2,50 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://landauros.github.io/llm-note/tags/attention/</loc>
+    <loc>https://landauros.github.io/blog/tags/attention/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/posts/01-attention-mechanism/</loc>
+    <loc>https://landauros.github.io/blog/posts/01-attention-mechanism/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/series/buaa-llm-course/</loc>
+    <loc>https://landauros.github.io/blog/series/buaa-llm-course/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/categories/</loc>
+    <loc>https://landauros.github.io/blog/categories/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/</loc>
+    <loc>https://landauros.github.io/blog/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/posts/</loc>
+    <loc>https://landauros.github.io/blog/posts/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/tags/</loc>
+    <loc>https://landauros.github.io/blog/tags/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/tags/tokenizer/</loc>
+    <loc>https://landauros.github.io/blog/tags/tokenizer/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/tags/transformer/</loc>
+    <loc>https://landauros.github.io/blog/tags/transformer/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/posts/02-llm-basic-concepts/</loc>
+    <loc>https://landauros.github.io/blog/posts/02-llm-basic-concepts/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/series/</loc>
+    <loc>https://landauros.github.io/blog/series/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/categories/%E6%9E%B6%E6%9E%84/</loc>
+    <loc>https://landauros.github.io/blog/categories/%E6%9E%B6%E6%9E%84/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/tags/%E6%95%B0%E5%AD%A6%E6%8E%A8%E5%AF%BC/</loc>
+    <loc>https://landauros.github.io/blog/tags/%E6%95%B0%E5%AD%A6%E6%8E%A8%E5%AF%BC/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/tags/%E9%A2%84%E8%AE%AD%E7%BB%83/</loc>
+    <loc>https://landauros.github.io/blog/tags/%E9%A2%84%E8%AE%AD%E7%BB%83/</loc>
     <lastmod>2026-03-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/about/</loc>
+    <loc>https://landauros.github.io/blog/about/</loc>
   </url><url>
-    <loc>https://landauros.github.io/llm-note/search/</loc>
+    <loc>https://landauros.github.io/blog/search/</loc>
   </url>
 </urlset>

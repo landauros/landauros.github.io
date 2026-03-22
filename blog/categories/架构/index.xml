@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>架构 on LLM Notes | 大模型学习笔记</title>
-    <link>https://landauros.github.io/llm-note/categories/%E6%9E%B6%E6%9E%84/</link>
+    <link>https://landauros.github.io/blog/categories/%E6%9E%B6%E6%9E%84/</link>
     <description>Recent content in 架构 on LLM Notes | 大模型学习笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://landauros.github.io/llm-note/categories/%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://landauros.github.io/blog/categories/%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Attention 到底在做什么：从矩阵乘法到信息检索</title>
-      <link>https://landauros.github.io/llm-note/posts/01-attention-mechanism/</link>
+      <link>https://landauros.github.io/blog/posts/01-attention-mechanism/</link>
       <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://landauros.github.io/llm-note/posts/01-attention-mechanism/</guid>
+      <guid>https://landauros.github.io/blog/posts/01-attention-mechanism/</guid>
       <description>从信息检索的视角重新理解 Self-Attention 机制的设计动机和数学原理</description>
     </item>
     <item>
       <title>大模型基本概念</title>
-      <link>https://landauros.github.io/llm-note/posts/02-llm-basic-concepts/</link>
+      <link>https://landauros.github.io/blog/posts/02-llm-basic-concepts/</link>
       <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://landauros.github.io/llm-note/posts/02-llm-basic-concepts/</guid>
+      <guid>https://landauros.github.io/blog/posts/02-llm-basic-concepts/</guid>
       <description>大语言模型基础知识入门</description>
     </item>
   </channel>
