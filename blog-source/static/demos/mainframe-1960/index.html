@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>MAINFRAME-1960 | 从分时系统到 LLM</title>
+    <meta
+      name="description"
+      content="一个在浏览器里体验 1965 年 MULTICS 分时系统，并过渡到 2026 年 LLM API 终端的交互式演示。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="demo-shell" data-era="1965">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Interactive Column</p>
+          <h1>MAINFRAME-1960</h1>
+          <p class="hero-text">
+            以 1965 年 MIT 研究员的身份登录 MULTICS，体验共享主机、文件权限、
+            时间片调度，再亲眼看着它变成 2026 年的 LLM API 终端。
+          </p>
+        </div>
+        <div class="hero-meta">
+          <span>1965 MULTICS</span>
+          <span>2026 GPU Cluster</span>
+          <span>Shared Compute</span>
+        </div>
+      </section>
+
+      <section class="console-layout">
+        <div class="screen-panel">
+          <div class="bezel">
+            <div class="bezel-top">
+              <span>MIT COMPUTATION CENTER</span>
+              <span id="era-badge">ERA / 1965</span>
+            </div>
+
+            <div class="screen-shell">
+              <div class="screen-glass">
+                <div class="screen-vignette"></div>
+                <div class="scanlines"></div>
+                <div class="noise"></div>
+
+                <div class="terminal-header">
+                  <span id="header-title">MULTICS TIMESHARING TERMINAL</span>
+                  <span id="header-subtitle">TTY-01 / CONNECTED</span>
+                </div>
+
+                <div id="terminal-output" class="terminal-output" aria-live="polite"></div>
+
+                <label class="input-line" for="command-input">
+                  <span id="prompt" class="prompt"></span>
+                  <input
+                    id="command-input"
+                    class="command-input"
+                    type="text"
+                    autocomplete="off"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                    aria-label="Terminal command input"
+                  />
+                  <span id="cursor" class="cursor"></span>
+                </label>
+
+                <div id="transition-overlay" class="transition-overlay" aria-hidden="true">
+                  <div class="transition-grid"></div>
+                  <div id="transition-copy" class="transition-copy"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="status-panel">
+              <div id="status-primary" class="status-row"></div>
+              <div id="status-secondary" class="status-row"></div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="info-panel">
+          <section class="info-card">
+            <p class="card-kicker">Mission Brief</p>
+            <h2 id="brief-title">共享计算，从主机开始</h2>
+            <p id="brief-copy" class="card-copy"></p>
+          </section>
+
+          <section class="info-card">
+            <p class="card-kicker">Quick Commands</p>
+            <div id="quick-actions" class="quick-actions"></div>
+          </section>
+
+          <section class="info-card">
+            <p class="card-kicker">Concept Lens</p>
+            <ul id="concept-list" class="concept-list"></ul>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
