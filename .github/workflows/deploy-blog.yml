@@ -2,7 +2,7 @@ name: Deploy Blog
 
 on:
   push:
-    branches: [main]
+    git push origin main --force
   workflow_dispatch:
 
 permissions:
