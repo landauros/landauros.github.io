@@ -16,6 +16,13 @@
       <description>从信息检索的视角重新理解 Self-Attention 机制的设计动机和数学原理</description>
     </item>
     <item>
+      <title>从 1965 年的分时系统到 2026 年的 LLM API：计算范式的轮回</title>
+      <link>https://landauros.github.io/blog/posts/03-mainframe-1960-llm-api/</link>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://landauros.github.io/blog/posts/03-mainframe-1960-llm-api/</guid>
+      <description>通过交互式 CRT 终端体验分时系统，再理解 LLM API 为什么像 2026 年的主机时代。</description>
+    </item>
+    <item>
       <title>大模型基本概念</title>
       <link>https://landauros.github.io/blog/posts/02-llm-basic-concepts/</link>
       <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
