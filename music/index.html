@@ -8,56 +8,87 @@
       name="description"
       content="A standalone music page for Shutong Liu, with genre filters and a growing catalog of artists."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="stylesheet" href="./styles.css" />
     <script defer src="./app.js"></script>
   </head>
-  <body>
+  <body class="music-body">
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <nav class="nav">
-      <div class="container">
-        <a href="../">Home</a>
-        <a href="../blog/">Blog</a>
-        <a class="active" href="./">Music</a>
-        <a href="../#contact">Contact</a>
-        <a href="../#education">Education</a>
-        <a href="../#research">Research</a>
-        <a href="../#honors">Honors</a>
-        <a href="../#competitions">Competitions</a>
+    <header class="music-chrome">
+      <div class="container music-chrome-inner">
+        <a class="music-wordmark" href="./">Music</a>
+        <nav class="music-nav" aria-label="Music site navigation">
+          <a href="../">Home</a>
+          <a href="../blog/">Blog</a>
+          <a class="active" href="./">Archive</a>
+          <a href="#music-directory">Genres</a>
+        </nav>
       </div>
-    </nav>
+    </header>
 
     <main id="main-content" class="music-page">
       <section class="music-hero">
         <div class="container">
-          <p class="eyebrow">Personal archive</p>
-          <h1>Music I Listen To</h1>
-          <p class="music-subtitle">
-            A standalone catalog of artists and composers that have shaped how I
-            listen, focus, and reset.
-          </p>
+          <div class="music-hero-grid">
+            <figure class="music-feature-art" id="feature-art">
+              <div class="music-feature-placeholder">BG</div>
+            </figure>
 
-          <div class="music-stats" aria-label="Music catalog stats">
-            <div class="music-stat">
-              <strong id="artist-count">0</strong>
-              <span>artists</span>
+            <div class="music-feature-copy">
+              <p class="music-kicker" id="feature-kicker">Featured listening note</p>
+              <h1 id="feature-name">Buddy Guy</h1>
+              <p class="music-feature-text" id="feature-comment">
+                A listening archive shaped like a small standalone site: warm,
+                tactile, and a little more like sleeve notes than a generic grid.
+              </p>
+
+              <div class="music-hero-actions">
+                <a class="music-cta music-cta-primary" id="feature-link" href="#music-directory">
+                  Open archive
+                </a>
+                <a class="music-cta music-cta-secondary" href="#music-directory">Browse by genre</a>
+              </div>
+
+              <div class="music-stats" aria-label="Music catalog stats">
+                <div class="music-stat">
+                  <strong id="artist-count">0</strong>
+                  <span>artists</span>
+                </div>
+                <div class="music-stat">
+                  <strong id="genre-count">0</strong>
+                  <span>genres</span>
+                </div>
+              </div>
             </div>
-            <div class="music-stat">
-              <strong id="genre-count">0</strong>
-              <span>genres</span>
-            </div>
+          </div>
+
+          <div class="music-feature-strip" id="feature-strip" aria-label="Featured artists">
+            <p class="music-loading">Loading featured artists...</p>
           </div>
         </div>
       </section>
 
-      <section class="music-directory">
+      <section class="music-directory" id="music-directory">
         <div class="container">
+          <div class="music-directory-head">
+            <p class="music-section-label">Archive</p>
+            <h2>By genre, not by algorithm</h2>
+            <p class="music-helper">
+              The mood here should feel closer to an annotated shelf than a streaming dashboard.
+            </p>
+          </div>
+
           <div class="music-toolbar">
             <div class="music-filters" id="music-filters" aria-label="Filter artists by genre">
               <button class="filter-btn active" data-filter="all" type="button">All</button>
             </div>
-            <p class="music-helper">Choose a genre to focus on one lane at a time.</p>
           </div>
 
           <div class="music-content" id="music-content" aria-live="polite">
@@ -67,7 +98,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer music-footer">
       <div class="container footer-inner">
         <p>&copy; 2026 Shutong Liu</p>
       </div>

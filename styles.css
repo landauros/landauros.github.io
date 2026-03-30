@@ -221,9 +221,9 @@ h3 {
 }
 
 .music-section {
-  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
-  border-top: 1px solid #e8eef8;
-  border-bottom: 1px solid #e8eef8;
+  background: linear-gradient(180deg, #f4ede3 0%, #fbf6ef 100%);
+  border-top: 1px solid #e2d5c2;
+  border-bottom: 1px solid #e2d5c2;
 }
 
 .music-grid {
@@ -235,7 +235,7 @@ h3 {
 .music-preview-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-  gap: 24px;
+  gap: 28px;
   align-items: start;
 }
 
@@ -243,10 +243,16 @@ h3 {
   display: grid;
   gap: 18px;
   align-content: start;
+  padding: 28px;
+  border: 1px solid #dfd1bf;
+  border-radius: 24px;
+  background: rgba(255, 251, 245, 0.78);
 }
 
 .music-preview-copy p {
   margin: 0;
+  color: #5c4d41;
+  line-height: 1.8;
 }
 
 .music-preview-grid {
@@ -255,20 +261,49 @@ h3 {
   gap: 18px;
 }
 
+.music-entry-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border: 1px solid #8f3429;
+  border-radius: 999px;
+  background: #8f3429;
+  color: #fff7ef;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.music-entry-button:hover {
+  background: #77291f;
+  border-color: #77291f;
+  color: #fff7ef;
+  text-decoration: none;
+}
+
 .music-card {
   padding: 20px;
-  border: 1px solid #dbe5f0;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  border: 1px solid #dfd1bf;
+  border-radius: 20px;
+  background: rgba(255, 251, 245, 0.82);
+  box-shadow: 0 12px 28px rgba(82, 58, 39, 0.06);
 }
 
 .music-card h3 {
   margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .music-card p:last-child {
   margin-bottom: 0;
+  color: #5c4d41;
 }
 
 .music-label {
@@ -277,7 +312,7 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #4f6b8a;
+  color: #8f3429;
 }
 
 .timeline-item {

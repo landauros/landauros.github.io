@@ -9,6 +9,12 @@ const filtersEl = document.getElementById("music-filters");
 const contentEl = document.getElementById("music-content");
 const artistCountEl = document.getElementById("artist-count");
 const genreCountEl = document.getElementById("genre-count");
+const featureArtEl = document.getElementById("feature-art");
+const featureKickerEl = document.getElementById("feature-kicker");
+const featureNameEl = document.getElementById("feature-name");
+const featureCommentEl = document.getElementById("feature-comment");
+const featureLinkEl = document.getElementById("feature-link");
+const featureStripEl = document.getElementById("feature-strip");
 
 loadCatalog();
 
@@ -22,12 +28,15 @@ async function loadCatalog() {
     const payload = await response.json();
     state.catalog = normalizeCatalog(payload);
 
+    renderFeature();
     renderFilters();
     renderContent();
     renderStats();
   } catch (error) {
     contentEl.innerHTML =
-      '<p class="music-empty">The music catalog could not be loaded right now.</p>';
+      '<p class="music-empty">The music archive could not be loaded right now.</p>';
+    featureStripEl.innerHTML =
+      '<p class="music-empty">Featured artists are unavailable right now.</p>';
     console.error(error);
   }
 }
@@ -39,7 +48,17 @@ function normalizeCatalog(payload) {
     genres: genres.map((genre) => ({
       id: typeof genre.id === "string" ? genre.id : "",
       name: typeof genre.name === "string" ? genre.name : "Untitled",
-      artists: Array.isArray(genre.artists) ? genre.artists : [],
+      artists: Array.isArray(genre.artists)
+        ? genre.artists.map((artist) => ({
+            name: typeof artist.name === "string" ? artist.name : "Unknown Artist",
+            cover: typeof artist.cover === "string" ? artist.cover : "",
+            comment:
+              typeof artist.comment === "string" && artist.comment.trim()
+                ? artist.comment
+                : "Add a short note about why this artist belongs here.",
+            link: typeof artist.link === "string" ? artist.link : "",
+          }))
+        : [],
     })),
   };
 }
@@ -50,6 +69,73 @@ function renderStats() {
 
   artistCountEl.textContent = String(artistTotal);
   genreCountEl.textContent = String(genres.length);
+}
+
+function renderFeature() {
+  const genres = state.catalog?.genres ?? [];
+  const lead = genres[0]?.artists?.[0]
+    ? { genre: genres[0], artist: genres[0].artists[0] }
+    : null;
+  const featuredEntries = genres
+    .slice(1, 4)
+    .map((genre) => ({ genre, artist: genre.artists[0] }))
+    .filter((entry) => entry.artist);
+
+  if (!lead) {
+    return;
+  }
+
+  featureKickerEl.textContent = `${lead.genre.name} featured artist`;
+  featureNameEl.textContent = lead.artist.name;
+  featureCommentEl.textContent = lead.artist.comment;
+
+  if (lead.artist.link) {
+    featureLinkEl.href = lead.artist.link;
+    featureLinkEl.target = "_blank";
+    featureLinkEl.rel = "noreferrer noopener";
+    featureLinkEl.textContent = "Visit artist";
+  } else {
+    featureLinkEl.href = "#music-directory";
+    featureLinkEl.removeAttribute("target");
+    featureLinkEl.removeAttribute("rel");
+    featureLinkEl.textContent = "Open archive";
+  }
+
+  featureArtEl.innerHTML = lead.artist.cover
+    ? renderFeatureImage(lead.artist.cover, lead.artist.name)
+    : `<div class="music-feature-placeholder">${escapeHtml(getInitials(lead.artist.name))}</div>`;
+
+  featureStripEl.innerHTML = featuredEntries.length
+    ? featuredEntries.map(renderMiniFeature).join("")
+    : '<p class="music-empty">More featured artists will appear here as the archive grows.</p>';
+
+  attachImageFallbacks(featureArtEl);
+  attachImageFallbacks(featureStripEl);
+}
+
+function renderFeatureImage(cover, name) {
+  return `<img class="card-image" src="${escapeHtml(cover)}" alt="${escapeHtml(name)}" loading="eager" />`;
+}
+
+function renderMiniFeature(entry) {
+  const coverMarkup = entry.artist.cover
+    ? `<img class="card-image" src="${escapeHtml(entry.artist.cover)}" alt="${escapeHtml(entry.artist.name)}" loading="lazy" />`
+    : renderPlaceholder(entry.artist.name);
+
+  const href = entry.artist.link || `#genre-${escapeHtml(entry.genre.id)}`;
+
+  return `
+    <a class="music-mini-feature" href="${escapeHtml(href)}"${entry.artist.link ? ' target="_blank" rel="noreferrer noopener"' : ""}>
+      <div class="music-mini-cover">
+        ${coverMarkup}
+      </div>
+      <div class="music-mini-meta">
+        <p class="music-mini-kicker">${escapeHtml(entry.genre.name)}</p>
+        <h2 class="music-mini-name">${escapeHtml(entry.artist.name)}</h2>
+        <p class="music-mini-text">${escapeHtml(trimComment(entry.artist.comment, 88))}</p>
+      </div>
+    </a>
+  `;
 }
 
 function renderFilters() {
@@ -98,39 +184,48 @@ function renderContent() {
     .map((genre) => renderGenreSection(genre, state.filter !== "all"))
     .join("");
 
-  attachImageFallbacks();
+  attachImageFallbacks(contentEl);
 }
 
 function renderGenreSection(genre, hideLabel) {
   return `
-    <section class="genre-section" data-genre="${escapeHtml(genre.id)}">
-      <p class="genre-label" ${hideLabel ? 'style="display:none"' : ""}>
+    <section class="genre-section" data-genre="${escapeHtml(genre.id)}" id="genre-${escapeHtml(genre.id)}">
+      <p class="genre-label"${hideLabel ? ' style="display:none"' : ""}>
         ${escapeHtml(genre.name)} · ${genre.artists.length}
       </p>
       <div class="music-grid">
-        ${genre.artists.map((artist) => renderArtistCard(artist, genre.id)).join("")}
+        ${genre.artists.map((artist) => renderArtistCard(artist, genre.name, genre.id)).join("")}
       </div>
     </section>
   `;
 }
 
-function renderArtistCard(artist, genreId) {
-  const name = typeof artist.name === "string" ? artist.name : "Unknown Artist";
-  const cover = typeof artist.cover === "string" ? artist.cover : "";
-  const comment =
-    typeof artist.comment === "string" && artist.comment.trim()
-      ? artist.comment
-      : "Add a short note about why this artist belongs here.";
-  const link = typeof artist.link === "string" ? artist.link : "";
+function renderArtistCard(artist, genreName, genreId) {
+  const shellContent = `
+    <div class="card-shell">
+      <div class="card-cover">
+        ${artist.cover ? renderCoverImage(artist.cover, artist.name) : renderPlaceholder(artist.name)}
+      </div>
+      <div class="card-meta">
+        <h3 class="card-name">${escapeHtml(artist.name)}</h3>
+        <p class="card-genre">${escapeHtml(genreName)}</p>
+      </div>
+      <p class="card-comment">${escapeHtml(artist.comment)}</p>
+      ${artist.link ? '<span class="card-link">Visit</span>' : ""}
+    </div>
+  `;
+
+  if (artist.link) {
+    return `
+      <a class="music-card" data-genre="${escapeHtml(genreId)}" href="${escapeHtml(artist.link)}" target="_blank" rel="noreferrer noopener">
+        ${shellContent}
+      </a>
+    `;
+  }
 
   return `
     <article class="music-card" data-genre="${escapeHtml(genreId)}">
-      <div class="card-cover">
-        ${cover ? renderCoverImage(cover, name) : renderPlaceholder(name)}
-      </div>
-      <h2 class="card-name">${escapeHtml(name)}</h2>
-      <p class="card-comment">${escapeHtml(comment)}</p>
-      ${link ? renderLink(link, name) : ""}
+      ${shellContent}
     </article>
   `;
 }
@@ -143,16 +238,8 @@ function renderPlaceholder(name) {
   return `<span class="card-placeholder" aria-hidden="true">${escapeHtml(getInitials(name))}</span>`;
 }
 
-function renderLink(link, name) {
-  return `
-    <a class="card-link" href="${escapeHtml(link)}" target="_blank" rel="noreferrer noopener" aria-label="Open ${escapeHtml(name)}">
-      ↗
-    </a>
-  `;
-}
-
-function attachImageFallbacks() {
-  for (const image of contentEl.querySelectorAll(".card-image")) {
+function attachImageFallbacks(scope) {
+  for (const image of scope.querySelectorAll(".card-image")) {
     if (image.complete && image.naturalWidth === 0) {
       image.parentElement.innerHTML = renderPlaceholder(image.alt || "NA");
       continue;
@@ -166,6 +253,14 @@ function attachImageFallbacks() {
       { once: true },
     );
   }
+}
+
+function trimComment(comment, maxLength) {
+  if (comment.length <= maxLength) {
+    return comment;
+  }
+
+  return `${comment.slice(0, maxLength - 1).trimEnd()}…`;
 }
 
 function getInitials(name) {
