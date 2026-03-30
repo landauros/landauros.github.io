@@ -64,12 +64,18 @@ a:hover {
 .nav .container {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav a {
   color: var(--text);
   font-size: 15px;
   font-weight: 500;
+}
+
+.nav a.active {
+  color: var(--link);
 }
 
 .nav a:hover {
@@ -226,6 +232,29 @@ h3 {
   gap: 18px;
 }
 
+.music-preview-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.music-preview-copy {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.music-preview-copy p {
+  margin: 0;
+}
+
+.music-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .music-card {
   padding: 20px;
   border: 1px solid #dbe5f0;
@@ -302,6 +331,7 @@ ul li {
   .nav .container {
     gap: 16px;
     overflow-x: auto;
+    flex-wrap: nowrap;
   }
 
   .section {
@@ -313,6 +343,11 @@ ul li {
   }
 
   .music-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .music-preview-layout,
+  .music-preview-grid {
     grid-template-columns: 1fr;
   }
 

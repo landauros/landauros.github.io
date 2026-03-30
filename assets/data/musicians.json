@@ -1,0 +1,292 @@
+{
+  "genres": [
+    {
+      "name": "Blues",
+      "id": "blues",
+      "artists": [
+        {
+          "name": "Buddy Guy",
+          "cover": "../assets/images/music/buddyguy.jpg",
+          "comment": "An electric-blues giant whose sting, swing, and fearless stage energy still make the form feel alive and dangerous.",
+          "link": "https://buddyguy.net/"
+        },
+        {
+          "name": "B.B. King",
+          "cover": "",
+          "comment": "A placeholder for regal phrasing, warm vibrato, and solos that say more by doing less.",
+          "link": ""
+        },
+        {
+          "name": "Muddy Waters",
+          "cover": "",
+          "comment": "Keep this slot for Chicago blues foundations that still sound elemental rather than historical.",
+          "link": ""
+        },
+        {
+          "name": "Howlin' Wolf",
+          "cover": "",
+          "comment": "A place for the rougher edge of the tradition: huge presence, stark lines, and unforgettable force.",
+          "link": ""
+        },
+        {
+          "name": "Stevie Ray Vaughan",
+          "cover": "",
+          "comment": "Useful for guitar playing that turns control, speed, and feeling into one continuous motion.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "Rock",
+      "id": "rock",
+      "artists": [
+        {
+          "name": "Pink Floyd",
+          "cover": "../assets/images/music/pinkfloyd.jpg",
+          "comment": "A band that made atmosphere structural: patient builds, huge spaces, and albums that feel like complete worlds.",
+          "link": "https://www.pinkfloyd.com/"
+        },
+        {
+          "name": "Radiohead",
+          "cover": "../assets/images/music/radiohead.jpg",
+          "comment": "A placeholder note for albums that still feel strange, precise, and alive.",
+          "link": ""
+        },
+        {
+          "name": "The Beatles",
+          "cover": "../assets/images/music/thebeatles.jpg",
+          "comment": "Useful as a reminder that melodic clarity and experiment do not cancel each other out.",
+          "link": ""
+        },
+        {
+          "name": "Led Zeppelin",
+          "cover": "../assets/images/music/ledzeppelin.jpg",
+          "comment": "Reserve this slot for music with weight, motion, and a sense of physical space.",
+          "link": ""
+        },
+        {
+          "name": "The Smashing Pumpkins",
+          "cover": "../assets/images/music/thesmashingpumpkins.jpg",
+          "comment": "Good for louder records that still carry fragility inside the distortion.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "Pop / Alt",
+      "id": "pop-alt",
+      "artists": [
+        {
+          "name": "Mahmood",
+          "cover": "../assets/images/music/mahmood.jpg",
+          "comment": "Italian pop that balances immaculate hooks with bruised intimacy; sleek on the surface, but emotionally restless underneath.",
+          "link": "https://www.mahmood.it/"
+        },
+        {
+          "name": "Frank Ocean",
+          "cover": "",
+          "comment": "A placeholder for pop writing that stays fluid, evasive, and emotionally exact.",
+          "link": ""
+        },
+        {
+          "name": "FKA twigs",
+          "cover": "",
+          "comment": "Keep this for music where body, texture, and design feel inseparable from the song itself.",
+          "link": ""
+        },
+        {
+          "name": "Rosalia",
+          "cover": "",
+          "comment": "A good slot for artists who can make tradition and futurism sound natural in the same breath.",
+          "link": ""
+        },
+        {
+          "name": "Caroline Polachek",
+          "cover": "",
+          "comment": "Useful for polished pop that still takes melodic and emotional risks.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "Electronic",
+      "id": "electronic",
+      "artists": [
+        {
+          "name": "Aphex Twin",
+          "cover": "../assets/images/music/aphextwin.jpg",
+          "comment": "A placeholder for electronic detail that keeps revealing new structure over time.",
+          "link": ""
+        },
+        {
+          "name": "Boards of Canada",
+          "cover": "../assets/images/music/boardsofcanada.jpg",
+          "comment": "For music that feels half-memory, half-signal, and impossible to flatten into one mood.",
+          "link": ""
+        },
+        {
+          "name": "Four Tet",
+          "cover": "../assets/images/music/fourtet.jpg",
+          "comment": "A future note can live here about patience, rhythm, and quiet surprise.",
+          "link": ""
+        },
+        {
+          "name": "Burial",
+          "cover": "../assets/images/music/burial.jpg",
+          "comment": "A useful slot for city-night records that sound distant and intimate at once.",
+          "link": ""
+        },
+        {
+          "name": "Daft Punk",
+          "cover": "../assets/images/music/daftpunk.jpg",
+          "comment": "Keep this one for electronic music that pairs strong design with real emotional lift.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "Jazz",
+      "id": "jazz",
+      "artists": [
+        {
+          "name": "Miles Davis",
+          "cover": "../assets/images/music/milesdavis.jpg",
+          "comment": "A placeholder for records that reduce everything to tone, timing, and restraint.",
+          "link": ""
+        },
+        {
+          "name": "John Coltrane",
+          "cover": "../assets/images/music/johncoltrane.jpg",
+          "comment": "This slot works well for intensity that still feels searching rather than closed.",
+          "link": ""
+        },
+        {
+          "name": "Bill Evans",
+          "cover": "../assets/images/music/billevans.jpg",
+          "comment": "A home for piano recordings that create focus without becoming background music.",
+          "link": ""
+        },
+        {
+          "name": "Charles Mingus",
+          "cover": "../assets/images/music/charlesmingus.jpg",
+          "comment": "For larger, more unruly ensembles that somehow land exactly where they should.",
+          "link": ""
+        },
+        {
+          "name": "Chet Baker",
+          "cover": "../assets/images/music/chetbaker.jpg",
+          "comment": "Useful for the quieter edges of the collection where vulnerability leads the sound.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "Classical",
+      "id": "classical",
+      "artists": [
+        {
+          "name": "Johann Sebastian Bach",
+          "cover": "../assets/images/music/bach.jpg",
+          "comment": "A placeholder for architecture, repetition, and the feeling that order can still sing.",
+          "link": ""
+        },
+        {
+          "name": "Ludwig van Beethoven",
+          "cover": "../assets/images/music/beethoven.jpg",
+          "comment": "Keep this for works that start as argument and end as something larger than force.",
+          "link": ""
+        },
+        {
+          "name": "Claude Debussy",
+          "cover": "../assets/images/music/debussy.jpg",
+          "comment": "A good home for color, ambiguity, and pieces that move like changing light.",
+          "link": ""
+        },
+        {
+          "name": "Franz Schubert",
+          "cover": "../assets/images/music/schubert.jpg",
+          "comment": "Use this for music that sounds simple at first and devastating once it settles in.",
+          "link": ""
+        },
+        {
+          "name": "Maurice Ravel",
+          "cover": "../assets/images/music/ravel.jpg",
+          "comment": "Another placeholder for craft so exact that it starts to feel almost unreal.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "Hip-Hop",
+      "id": "hiphop",
+      "artists": [
+        {
+          "name": "Kendrick Lamar",
+          "cover": "../assets/images/music/kendricklamar.jpg",
+          "comment": "A place for albums where technical control and moral pressure move together.",
+          "link": ""
+        },
+        {
+          "name": "A Tribe Called Quest",
+          "cover": "../assets/images/music/atribecalledquest.jpg",
+          "comment": "Good for records that stay playful, warm, and rhythmically sharp at the same time.",
+          "link": ""
+        },
+        {
+          "name": "Nas",
+          "cover": "../assets/images/music/nas.jpg",
+          "comment": "Use this slot for writing that turns scene, history, and voice into one gesture.",
+          "link": ""
+        },
+        {
+          "name": "J Dilla",
+          "cover": "../assets/images/music/jdilla.jpg",
+          "comment": "A placeholder for the producers whose timing changes how everything else feels.",
+          "link": ""
+        },
+        {
+          "name": "Nujabes",
+          "cover": "../assets/images/music/nujabes.jpg",
+          "comment": "Reserve this one for music that stays gentle without becoming slight.",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "name": "Folk / Indie",
+      "id": "folk",
+      "artists": [
+        {
+          "name": "Bon Iver",
+          "cover": "../assets/images/music/boniver.jpg",
+          "comment": "A place for records that sound like weather, memory, and interior monologue.",
+          "link": ""
+        },
+        {
+          "name": "Sufjan Stevens",
+          "cover": "../assets/images/music/sufjanstevens.jpg",
+          "comment": "Useful for the part of the catalog where detail and tenderness keep changing scale.",
+          "link": ""
+        },
+        {
+          "name": "Phoebe Bridgers",
+          "cover": "../assets/images/music/phoebebridgers.jpg",
+          "comment": "Keep this slot for songs that stay understated while still cutting very deep.",
+          "link": ""
+        },
+        {
+          "name": "Nick Drake",
+          "cover": "../assets/images/music/nickdrake.jpg",
+          "comment": "A placeholder note for spare arrangements that leave a long afterimage.",
+          "link": ""
+        },
+        {
+          "name": "Fleet Foxes",
+          "cover": "../assets/images/music/fleetfoxes.jpg",
+          "comment": "Good for harmonies and songs that make open space feel almost architectural.",
+          "link": ""
+        }
+      ]
+    }
+  ]
+}
