@@ -164,6 +164,10 @@ h1 {
   padding: 40px 0;
 }
 
+.section-heading {
+  margin-bottom: 24px;
+}
+
 h2 {
   margin: 0 0 20px;
   font-size: 24px;
@@ -180,6 +184,12 @@ h3 {
   margin: 0 0 8px;
   color: var(--muted);
   font-size: 14px;
+}
+
+.section-intro {
+  max-width: 680px;
+  margin: 0;
+  color: var(--muted);
 }
 
 .grid {
@@ -202,6 +212,43 @@ h3 {
   border-radius: 0;
   box-shadow: none;
   padding: 0;
+}
+
+.music-section {
+  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+  border-top: 1px solid #e8eef8;
+  border-bottom: 1px solid #e8eef8;
+}
+
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.music-card {
+  padding: 20px;
+  border: 1px solid #dbe5f0;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.music-card h3 {
+  margin-bottom: 10px;
+}
+
+.music-card p:last-child {
+  margin-bottom: 0;
+}
+
+.music-label {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4f6b8a;
 }
 
 .timeline-item {
@@ -262,6 +309,10 @@ ul li {
   }
 
   .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .music-grid {
     grid-template-columns: 1fr;
   }
 
