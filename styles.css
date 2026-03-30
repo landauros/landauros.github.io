@@ -134,10 +134,48 @@ h1 {
   margin-top: 20px;
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.metric-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #f8fafc;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.metric-label {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.metric-value {
+  color: var(--muted);
+}
+
+#busuanzi_container_page_pv,
+#busuanzi_container_site_pv {
+  display: none;
 }
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid var(--border);
@@ -164,6 +202,13 @@ h1 {
   background: var(--link-hover);
   border-color: var(--link-hover);
   color: #ffffff;
+}
+
+.btn-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex: 0 0 auto;
 }
 
 .section {
