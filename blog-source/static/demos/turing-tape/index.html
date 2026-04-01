@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>TURING TAPE | Interactive Paper Tape Demo</title>
+    <meta
+      name="description"
+      content="An interactive Turing machine demo with paper tape, single-step execution, transition tracing, and classic toy programs."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="demo-shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Interactive Column</p>
+          <h1>TURING TAPE</h1>
+          <p class="hero-text">
+            A tactile little machine: edit the tape, step the head, watch the state
+            table fire, and see how a finite controller can still orchestrate
+            unbounded computation.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <span>Paper Tape</span>
+          <span>State Machine</span>
+          <span>Step by Step</span>
+        </div>
+      </section>
+
+      <section class="workspace">
+        <div class="machine-column">
+          <section class="panel controls-panel">
+            <div class="controls-head">
+              <div>
+                <p class="section-kicker">Program</p>
+                <h2 id="program-title">Unary Increment</h2>
+              </div>
+              <p id="program-summary" class="program-summary"></p>
+            </div>
+
+            <div class="control-grid">
+              <label class="control-field">
+                <span class="field-label">Machine</span>
+                <select id="machine-select"></select>
+              </label>
+
+              <label class="control-field">
+                <span class="field-label">Initial tape</span>
+                <input
+                  id="tape-input"
+                  type="text"
+                  inputmode="text"
+                  autocomplete="off"
+                  spellcheck="false"
+                />
+              </label>
+
+              <div class="control-field">
+                <span class="field-label">Examples</span>
+                <div id="example-buttons" class="example-buttons"></div>
+              </div>
+
+              <label class="control-field">
+                <span class="field-label">Run speed</span>
+                <input id="speed-range" type="range" min="120" max="900" step="20" value="420" />
+              </label>
+            </div>
+
+            <div class="action-row">
+              <button id="load-button" class="action-btn action-btn-primary" type="button">Load Tape</button>
+              <button id="step-button" class="action-btn" type="button">Step</button>
+              <button id="run-button" class="action-btn" type="button">Run</button>
+              <button id="pause-button" class="action-btn" type="button">Pause</button>
+              <button id="reset-button" class="action-btn" type="button">Reset</button>
+            </div>
+          </section>
+
+          <section class="panel tape-panel">
+            <div class="tape-header">
+              <div>
+                <p class="section-kicker">Machine View</p>
+                <h2>Paper Tape Window</h2>
+              </div>
+              <div class="status-pills">
+                <span class="status-pill">State <strong id="current-state">q0</strong></span>
+                <span class="status-pill">Head <strong id="head-position">0</strong></span>
+                <span class="status-pill">Step <strong id="step-count">0</strong></span>
+              </div>
+            </div>
+
+            <div class="tape-stage">
+              <div class="head-bridge">
+                <div class="head-pointer"></div>
+                <div class="head-label">READ / WRITE HEAD</div>
+              </div>
+              <div id="tape-track" class="tape-track" aria-live="polite"></div>
+            </div>
+
+            <div class="machine-foot">
+              <div class="foot-card">
+                <span class="field-label">Read</span>
+                <strong id="read-symbol">_</strong>
+              </div>
+              <div class="foot-card">
+                <span class="field-label">Last transition</span>
+                <strong id="transition-label">Waiting for input</strong>
+              </div>
+              <div class="foot-card">
+                <span class="field-label">Status</span>
+                <strong id="machine-status">Idle</strong>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <section class="panel info-card">
+            <p class="section-kicker">How To Read It</p>
+            <ul class="guide-list">
+              <li>The highlighted cell is the current tape head position.</li>
+              <li>Each step reads one symbol, writes one symbol, then moves left or right.</li>
+              <li>The table on the right is the whole machine. There is no hidden memory.</li>
+            </ul>
+          </section>
+
+          <section class="panel info-card">
+            <p class="section-kicker">Current Transition</p>
+            <div id="transition-card" class="transition-card">
+              <p class="transition-empty">Load a tape and step the machine to see the active rule.</p>
+            </div>
+          </section>
+
+          <section class="panel info-card">
+            <p class="section-kicker">Transition Table</p>
+            <div id="transition-table" class="transition-table"></div>
+          </section>
+
+          <section class="panel info-card">
+            <p class="section-kicker">Execution Log</p>
+            <div id="execution-log" class="execution-log" aria-live="polite"></div>
+          </section>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>

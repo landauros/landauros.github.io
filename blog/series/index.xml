@@ -6,20 +6,20 @@
     <description>Recent content in 大模型课程系列 on LLM Notes | 大模型学习笔记</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://landauros.github.io/blog/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>计算范式</title>
+      <link>https://landauros.github.io/blog/series/%E8%AE%A1%E7%AE%97%E8%8C%83%E5%BC%8F/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://landauros.github.io/blog/series/%E8%AE%A1%E7%AE%97%E8%8C%83%E5%BC%8F/</guid>
+      <description></description>
+    </item>
     <item>
       <title>BUAA-LLM-Course</title>
       <link>https://landauros.github.io/blog/series/buaa-llm-course/</link>
       <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://landauros.github.io/blog/series/buaa-llm-course/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>计算范式</title>
-      <link>https://landauros.github.io/blog/series/%E8%AE%A1%E7%AE%97%E8%8C%83%E5%BC%8F/</link>
-      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://landauros.github.io/blog/series/%E8%AE%A1%E7%AE%97%E8%8C%83%E5%BC%8F/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Demo on LLM Notes | 大模型学习笔记</title>
+    <link>https://landauros.github.io/blog/tags/demo/</link>
+    <description>Recent content in Demo on LLM Notes | 大模型学习笔记</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 01 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://landauros.github.io/blog/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图灵机纸带：把计算过程拉成一条可以亲眼看见的带子</title>
+      <link>https://landauros.github.io/blog/posts/04-turing-machine-tape/</link>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://landauros.github.io/blog/posts/04-turing-machine-tape/</guid>
+      <description>通过一条可编辑纸带，交互式理解图灵机怎样读、写、移动，并在有限状态中完成计算。</description>
+    </item>
+  </channel>
+</rss>
